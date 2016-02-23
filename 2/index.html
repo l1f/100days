@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<style>
+			#aaa,#bbb{
+				position:absolute;
+				width: 200px;
+				height: 200px;
+			}
+			#aaa{
+				left:200px;
+				top:200px;
+				background-color: lightcyan;
+			}
+			#bbb{
+				left:300px;
+				top:300px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aaa">aaa</div>
+		<div id="bbb">bbb</div>
+		<script src="lib.js" ></script>
+		<script>
+			window.onload=function(){
+				var obj1 = createDraggableObject();
+				var obj2 = createDraggableObject();
+				obj1.init($('aaa'));
+				obj2.init($('bbb'));
+			}
+		</script>
+	</body>
+</html>
